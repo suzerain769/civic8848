@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CivicConnect — Citizen Service &amp; Complaint Platform (Student Prototype)</title>
+<meta name="description" content="CivicConnect is a student project prototype where citizens can report civic issues, track complaint status, browse public services and read local announcements." />
+<meta name="author" content="CivicConnect Student Project" />
+<meta property="og:title" content="CivicConnect — Citizen Service &amp; Complaint Platform" />
+<meta property="og:description" content="Report civic issues, track complaints and access public service information — a Class 12 student prototype." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-city"></i></span>
+      <span class="brand-text">Civic<strong>Connect</strong></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <ul class="nav-list" id="nav-list">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#complaints">Complaints</a></li>
+        <li><a class="nav-link" href="#track-status">Track Status</a></li>
+        <li><a class="nav-link" href="#announcements">Announcements</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm nav-cta" href="#complaints"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> File a Complaint</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+    <ul>
+      <li><a class="nav-link" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#services">Services</a></li>
+      <li><a class="nav-link" href="#complaints">Complaints</a></li>
+      <li><a class="nav-link" href="#track-status">Track Status</a></li>
+      <li><a class="nav-link" href="#announcements">Announcements</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li><a class="btn btn-primary btn-block" href="#complaints"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> File a Complaint</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="disclaimer-pill"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> CivicConnect is a student project prototype and is not an official government service.</p>
+        <h1 id="hero-title">Your Voice. Your City. One Platform.</h1>
+        <p class="lead">Report civic issues, track complaints, access public service information, and stay connected with your community — all from one place.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#complaints"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> File a Complaint</a>
+          <a class="btn btn-outline" href="#track-status"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Track Complaint</a>
+        </div>
+        <p class="tagline"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Making communities better, one complaint at a time.</p>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 480 360" role="img" aria-label="Illustration of a civic complaint dashboard showing a report card and status timeline">
+          <rect x="10" y="20" width="460" height="320" rx="22" fill="#eef4ff"/>
+          <rect x="38" y="52" width="404" height="52" rx="14" fill="#ffffff"/>
+          <circle cx="66" cy="78" r="13" fill="#1d4ed8"/>
+          <rect x="90" y="70" width="150" height="10" rx="5" fill="#c7d7f5"/>
+          <rect x="90" y="86" width="96" height="8" rx="4" fill="#dce7fa"/>
+          <rect x="366" y="66" width="56" height="24" rx="12" fill="#16a34a"/>
+          <rect x="38" y="122" width="196" height="120" rx="16" fill="#ffffff"/>
+          <rect x="60" y="146" width="120" height="10" rx="5" fill="#c7d7f5"/>
+          <rect x="60" y="166" width="152" height="8" rx="4" fill="#e6edf9"/>
+          <rect x="60" y="182" width="132" height="8" rx="4" fill="#e6edf9"/>
+          <rect x="60" y="206" width="86" height="20" rx="10" fill="#f97316"/>
+          <rect x="246" y="122" width="196" height="120" rx="16" fill="#ffffff"/>
+          <circle cx="276" cy="156" r="10" fill="#16a34a"/>
+          <circle cx="276" cy="188" r="10" fill="#1d4ed8"/>
+          <circle cx="276" cy="220" r="10" fill="#cbd5e1"/>
+          <rect x="272" y="160" width="8" height="24" fill="#cbd5e1"/>
+          <rect x="272" y="192" width="8" height="24" fill="#cbd5e1"/>
+          <rect x="296" y="151" width="112" height="9" rx="4" fill="#e6edf9"/>
+          <rect x="296" y="183" width="96" height="9" rx="4" fill="#e6edf9"/>
+          <rect x="296" y="215" width="80" height="9" rx="4" fill="#e6edf9"/>
+          <rect x="38" y="260" width="404" height="52" rx="16" fill="#ffffff"/>
+          <rect x="62" y="278" width="180" height="14" rx="7" fill="#dce7fa"/>
+          <rect x="330" y="272" width="92" height="26" rx="13" fill="#1d4ed8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <section id="quick-actions" class="section section-tight" aria-labelledby="quick-title">
+    <div class="container">
+      <h2 id="quick-title" class="sr-only">Quick actions</h2>
+      <div class="grid grid-4">
+        <a class="quick-card" href="#complaints">
+          <span class="qi qi-blue" aria-hidden="true"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="qc-title">File a Complaint</span>
+          <span class="qc-text">Report a civic issue in a minute.</span>
+        </a>
+        <a class="quick-card" href="#track-status">
+          <span class="qi qi-green" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+          <span class="qc-title">Track Complaint</span>
+          <span class="qc-text">Check progress with your complaint ID.</span>
+        </a>
+        <a class="quick-card" href="#services">
+          <span class="qi qi-orange" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span>
+          <span class="qc-title">Public Services</span>
+          <span class="qc-text">Browse common civic service areas.</span>
+        </a>
+        <a class="quick-card" href="#announcements">
+          <span class="qi qi-cyan" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+          <span class="qc-title">Local Announcements</span>
+          <span class="qc-text">Read the latest community notices.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="services-title">How Can We Help?</h2>
+        <p class="section-sub">Quickly report and find information about common civic services.</p>
+      </header>
+      <div class="grid grid-4" id="services-grid"><!-- rendered by script.js --></div>
+    </div>
+  </section>
+
+  <!-- COMPLAINTS -->
+  <section id="complaints" class="section section-alt" aria-labelledby="complaints-title">
+    <div class="container narrow">
+      <header class="section-head">
+        <h2 id="complaints-title">Report a Civic Issue</h2>
+        <p class="section-sub">Help improve your community by reporting a problem.</p>
+      </header>
+
+      <form class="card form-card" id="complaint-form" novalidate>
+        <p class="form-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Demo only: what you submit is saved in your own browser (LocalStorage) and is never sent anywhere.</p>
+
+        <div class="field">
+          <label for="c-name">Full Name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input id="c-name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="c-name-err" />
+          <p class="error" id="c-name-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="c-contact">Email or Phone Number <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input id="c-contact" name="contact" type="text" autocomplete="email" required aria-required="true" aria-describedby="c-contact-err" />
+          <p class="error" id="c-contact-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="c-category">Complaint Category <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <select id="c-category" name="category" required aria-required="true" aria-describedby="c-category-hint c-category-err">
+            <option value="">Select a category</option>
+            <option>Road &amp; Transportation</option>
+            <option>Water Supply</option>
+            <option>Waste Management</option>
+            <option>Electricity</option>
+            <option>Streetlight</option>
+            <option>Public Safety</option>
+            <option>Sanitation</option>
+            <option>Drainage</option>
+            <option>Other</option>
+          </select>
+          <p class="hint" id="c-category-hint" aria-live="polite"></p>
+          <p class="error" id="c-category-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="c-location">Location <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input id="c-location" name="location" type="text" placeholder="e.g. Ward 5, Main Road" required aria-required="true" aria-describedby="c-location-err" />
+          <p class="error" id="c-location-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="c-description">Description <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <textarea id="c-description" name="description" rows="5" required aria-required="true" aria-describedby="c-desc-hint c-description-err" placeholder="Describe the issue in at least 10 characters."></textarea>
+          <p class="hint" id="c-desc-hint">Minimum 10 characters.</p>
+          <p class="error" id="c-description-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="c-image">Upload Image <span class="optional">(optional)</span></label>
+          <input id="c-image" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" aria-describedby="c-image-hint c-image-err" />
+          <p class="hint" id="c-image-hint">JPG, PNG, WEBP or GIF, up to 5&nbsp;MB. Only the filename is stored.</p>
+          <p class="error" id="c-image-err" role="alert"></p>
+          <div class="preview" id="image-preview" hidden>
+            <img id="preview-img" src="" alt="Preview of the image you selected" />
+            <div class="preview-meta">
+              <span id="preview-name" class="preview-name"></span>
+              <button class="btn btn-ghost btn-sm" type="button" id="remove-image"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Remove image</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" id="complaint-submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit Complaint</button>
+          <button class="btn btn-ghost" type="button" id="complaint-reset"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset form</button>
+        </div>
+        <p class="error form-summary" id="complaint-summary" role="alert"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- TRACK -->
+  <section id="track-status" class="section" aria-labelledby="track-title">
+    <div class="container narrow">
+      <header class="section-head">
+        <h2 id="track-title">Track Your Complaint</h2>
+        <p class="section-sub">Enter your complaint ID to see the latest status.</p>
+      </header>
+
+      <form class="card track-card" id="track-form" novalidate>
+        <div class="field">
+          <label for="track-input">Complaint ID</label>
+          <div class="track-row">
+            <input id="track-input" name="trackId" type="text" placeholder="CC-2026-48291" aria-describedby="track-error" autocomplete="off" />
+            <button class="btn btn-primary" type="submit" id="track-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search</button>
+            <button class="btn btn-ghost" type="button" id="track-clear"><i class="fa-solid fa-eraser" aria-hidden="true"></i> Clear</button>
+          </div>
+          <p class="error" id="track-error" role="alert"></p>
+        </div>
+      </form>
+
+      <div id="track-result" class="track-result" aria-live="polite">
+        <div class="empty-state">
+          <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
+          <p><strong>Start by entering a complaint ID.</strong></p>
+          <p class="muted">Try a demo ID such as <button class="linklike" type="button" data-demo-id="CC-2026-10001">CC-2026-10001</button>, <button class="linklike" type="button" data-demo-id="CC-2026-10002">CC-2026-10002</button> or <button class="linklike" type="button" data-demo-id="CC-2026-10003">CC-2026-10003</button>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS -->
+  <section id="announcements" class="section section-alt" aria-labelledby="ann-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="ann-title">Latest Announcements</h2>
+        <p class="section-sub">Demo notices created for this student prototype.</p>
+      </header>
+
+      <div class="filters" id="ann-filters" role="group" aria-label="Filter announcements by category">
+        <button class="chip" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="Infrastructure" aria-pressed="false">Infrastructure</button>
+        <button class="chip" type="button" data-filter="Utilities" aria-pressed="false">Utilities</button>
+        <button class="chip" type="button" data-filter="Community" aria-pressed="false">Community</button>
+      </div>
+
+      <div class="grid grid-3" id="ann-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="section impact" aria-labelledby="impact-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="impact-title">Our Community Impact</h2>
+        <p class="section-sub">Illustrative demo figures for this student prototype — not real government statistics.</p>
+      </header>
+      <div class="grid grid-4" id="counters">
+        <div class="stat"><span class="stat-num" data-target="1200" data-suffix="+">0</span><span class="stat-label">Complaints Resolved</span></div>
+        <div class="stat"><span class="stat-num" data-target="50" data-suffix="+">0</span><span class="stat-label">Areas Covered</span></div>
+        <div class="stat"><span class="stat-num" data-target="5000" data-suffix="+">0</span><span class="stat-label">Citizens Registered</span></div>
+        <div class="stat"><span class="stat-num" data-target="92" data-suffix="%">0</span><span class="stat-label">Resolution Rate</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section section-alt" aria-labelledby="how-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="how-title">How It Works</h2>
+        <p class="section-sub">From report to resolution in four clear steps.</p>
+      </header>
+      <ol class="steps">
+        <li class="step"><span class="step-num">01</span><h3>Report</h3><p>Tell us about the civic issue.</p></li>
+        <li class="step"><span class="step-num">02</span><h3>Review</h3><p>The complaint is reviewed by the responsible authority.</p></li>
+        <li class="step"><span class="step-num">03</span><h3>Resolve</h3><p>The issue is assigned and addressed.</p></li>
+        <li class="step"><span class="step-num">04</span><h3>Track</h3><p>Citizens can monitor the progress until resolution.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="about-title">About CivicConnect</h2>
+      </header>
+      <div class="about-grid">
+        <div class="card about-card">
+          <p>CivicConnect is a concept platform designed to make communication between citizens and local authorities easier and more transparent.</p>
+          <p><strong>Our mission</strong> is to make civic services more accessible, transparent, and citizen-friendly.</p>
+          <p class="note"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> CivicConnect is a Class 12 student project and concept platform. It is a student project prototype and is not an official government service. No data leaves your browser.</p>
+        </div>
+        <ul class="values">
+          <li><i class="fa-solid fa-eye" aria-hidden="true"></i><div><h3>Transparency</h3><p>Clear status at every stage of a complaint.</p></div></li>
+          <li><i class="fa-solid fa-universal-access" aria-hidden="true"></i><div><h3>Accessibility</h3><p>Usable by keyboard, screen reader and on any screen size.</p></div></li>
+          <li><i class="fa-solid fa-people-group" aria-hidden="true"></i><div><h3>Community Participation</h3><p>Every citizen can raise and follow local issues.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+    <div class="container narrow">
+      <header class="section-head">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Opening one answer closes the others.</p>
+      </header>
+      <div class="accordion" id="accordion"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 id="contact-title">Get in Touch</h2>
+        <p class="section-sub">Questions about this prototype? Send us a message.</p>
+      </header>
+
+      <div class="contact-grid">
+        <form class="card form-card" id="contact-form" novalidate>
+          <div class="field">
+            <label for="k-name">Name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+            <input id="k-name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="k-name-err" />
+            <p class="error" id="k-name-err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="k-email">Email <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+            <input id="k-email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="k-email-err" />
+            <p class="error" id="k-email-err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="k-subject">Subject <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+            <input id="k-subject" name="subject" type="text" required aria-required="true" aria-describedby="k-subject-err" />
+            <p class="error" id="k-subject-err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="k-message">Message <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+            <textarea id="k-message" name="message" rows="5" required aria-required="true" aria-describedby="k-message-err"></textarea>
+            <p class="error" id="k-message-err" role="alert"></p>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" id="contact-submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+          </div>
+          <p class="success-inline" id="contact-success" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-side">
+          <div class="card info-card">
+            <p class="badge badge-info"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Demo / project contact details</p>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i> CivicConnect Community Office</li>
+              <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+977000000000">+977-000-0000000</a></li>
+              <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:hello@civicconnect.demo">hello@civicconnect.demo</a></li>
+            </ul>
+            <p class="muted small">These are placeholder details for a student project, not real official government contacts.</p>
+          </div>
+
+          <div class="card map-card">
+            <h3 class="map-title">Coverage area</h3>
+            <div class="map-graphic" aria-hidden="true">
+              <span class="pin pin-1"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="pin pin-2"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="pin pin-3"><i class="fa-solid fa-location-dot"></i></span>
+            </div>
+            <p class="muted small">Illustrative graphic only — this prototype has no live map.</p>
+            <button class="btn btn-outline btn-sm" type="button" id="map-btn" aria-label="View contact section for location details">
+              <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Location details
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-footer" href="#home">
+        <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-city"></i></span>
+        <span class="brand-text">Civic<strong>Connect</strong></span>
+      </a>
+      <p class="muted">A one-stop concept platform for reporting civic issues, tracking complaints and reading local announcements.</p>
+      <p class="footer-social-label">Follow us <span class="muted">(demo links)</span></p>
+      <div class="socials">
+        <button class="social" type="button" data-social="Facebook" aria-label="Facebook (demo placeholder)"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></button>
+        <button class="social" type="button" data-social="Instagram" aria-label="Instagram (demo placeholder)"><i class="fa-brands fa-instagram" aria-hidden="true"></i></button>
+        <button class="social" type="button" data-social="X" aria-label="X, formerly Twitter (demo placeholder)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></button>
+        <button class="social" type="button" data-social="LinkedIn" aria-label="LinkedIn (demo placeholder)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <nav aria-label="Quick links">
+      <h2 class="footer-head">Quick Links</h2>
+      <ul class="footer-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#complaints">Complaints</a></li>
+        <li><a href="#track-status">Track Status</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Services">
+      <h2 class="footer-head">Services</h2>
+      <ul class="footer-list" id="footer-services">
+        <li><a href="#services" data-service="road">Road Maintenance</a></li>
+        <li><a href="#services" data-service="water">Water Supply</a></li>
+        <li><a href="#services" data-service="waste">Waste Management</a></li>
+        <li><a href="#services" data-service="electricity">Electricity</a></li>
+        <li><a href="#services" data-service="sanitation">Sanitation</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="footer-head">Contact</h2>
+      <ul class="footer-list">
+        <li><a href="tel:+977000000000"><i class="fa-solid fa-phone" aria-hidden="true"></i> +977-000-0000000</a></li>
+        <li><a href="mailto:hello@civicconnect.demo"><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@civicconnect.demo</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Location &amp; office details</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="disclaimer-strip"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> CivicConnect is a student project prototype and is not an official government service.</p>
+    <p>© 2026 CivicConnect. Student Project — Concept Platform.</p>
+    <p class="muted">Designed to connect citizens with their communities.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-root" id="modal-root" hidden>
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <h2 id="modal-title">Title</h2>
+      <button class="icon-btn" type="button" id="modal-close" aria-label="Close dialog"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toast-polite" aria-live="polite" aria-atomic="false"></div>
+<div class="toast-stack toast-stack-assertive" id="toast-assertive" aria-live="assertive" aria-atomic="false"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
